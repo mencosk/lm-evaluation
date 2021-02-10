@@ -38,7 +38,7 @@ func TestInterpreter_Translate(t *testing.T) {
 		{
 			name: "Test Text to Morse",
 			args: testArgs3,
-			want: ".-",
+			want: ".- ",
 			wantErr: false,
 		},
 		{
