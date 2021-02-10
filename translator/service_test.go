@@ -18,6 +18,11 @@ func TestInterpreter_Translate(t *testing.T) {
 		source: "TTTTT",
 		target: "BINARY",
 	}
+	testArgs3 := args{
+		text:   "A",
+		source: "TEXT",
+		target: "MORSE",
+	}
 	tests := []struct {
 		name    string
 		args    args
@@ -28,6 +33,12 @@ func TestInterpreter_Translate(t *testing.T) {
 			name: "Test Text to Binary",
 			args: testArgs,
 			want: "01000001",
+			wantErr: false,
+		},
+		{
+			name: "Test Text to Morse",
+			args: testArgs3,
+			want: ".-",
 			wantErr: false,
 		},
 		{
