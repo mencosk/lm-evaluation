@@ -8,13 +8,23 @@ func TestInterpreter_Translate(t *testing.T) {
 		source string
 		target string
 	}
+	testArgs := args{
+		text:   "A",
+		source: "TEXT",
+		target: "BINARY",
+	}
 	tests := []struct {
 		name    string
 		args    args
 		want    string
 		wantErr bool
 	}{
-		// TODO: Add test cases.
+		{
+			name: "prueba Text to Binary",
+			args: testArgs,
+			want: "01000001",
+			wantErr: false,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
