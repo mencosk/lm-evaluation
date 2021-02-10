@@ -1,12 +1,13 @@
 package translator
 
-type Moser struct{}
+type Morse struct{}
 
-func (Moser) TranslateToText(text string) string {
+
+func (Morse) TranslateToText(text string) string {
 	return ""
 }
 
-func (Moser) TranslateToTarget(text string) string {
+func (Morse) TranslateToTarget(text string) string {
 	return ""
 }
 

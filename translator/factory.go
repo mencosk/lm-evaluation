@@ -15,7 +15,7 @@ func GetInterpreterSource(source string) (TranslateFactory, error) {
 		return Text{}, nil
 	}
 	if source == "MORSE" {
-		return Text{}, nil
+		return Morse{}, nil
 	}
 
 
@@ -30,7 +30,7 @@ func GetInterpreterTarget(target string) (TranslateFactory, error) {
 		return Text{}, nil
 	}
 	if target == "MORSE" {
-		return Text{}, nil
+		return Morse{}, nil
 	}
 	return nil, errors.New("invalid target format")
 }
